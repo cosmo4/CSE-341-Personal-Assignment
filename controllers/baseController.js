@@ -30,4 +30,20 @@ baseController.getOneContact = async function(req, res) {
     }
 }
 
+baseController.createUser = async function(req, res) {
+    try {
+        let result = await mongodb.getDb().db().collection('people').insertOne({
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            favoriteColor: req.body.favoriteColor,
+            birthday: req.body.birthday
+        })
+
+    } catch (error) {
+        console.error('Error adding user:', error);
+        res.status(500).json({ message: 'Internal server error' })
+    }
+}
+
 module.exports = baseController
