@@ -6,7 +6,7 @@ const baseController = require('../controllers/baseController')
 // GET /feed/posts
 router.get('/contacts', contactsRoute);
 
-router.post('/contacts', baseController.createUser)
+router.post('/contacts', baseController.createContact)
 
 module.exports = router;
 
