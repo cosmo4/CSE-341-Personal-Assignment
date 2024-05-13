@@ -13,3 +13,41 @@ GET https://cse-341-personal-assignment-gnjj.onrender.com/contacts/663a5734b6949
 GET https://cse-341-personal-assignment-gnjj.onrender.com/contacts/663a565bb69494f2c7aceb14
 ###
 GET https://cse-341-personal-assignment-gnjj.onrender.com/contacts/663a578db69494f2c7aceb16
+###
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Luke",
+    "lastName": "Skywalker",
+    "email": "empiresux@jedi.com",
+    "favoriteColor": "green",
+    "birthday": "01-01-1977"
+
+}
+###
+POST https://cse-341-personal-assignment-gnjj.onrender.com/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Luke",
+    "lastName": "Skywalker",
+    "email": "empiresux@jedi.com",
+    "favoriteColor": "green",
+    "birthday": "01-01-1977"
+
+}
+###
+PUT http://localhost:8080/contacts/663a5734b69494f2c7aceb15
+Content-Type: application/json
+
+{
+    "firstName": "Seth",
+    "lastName": "Warner",
+    "email": "war3000@gmail.com",
+    "favoriteColor": "blue",
+    "birthday": "01-01-1998"
+
+}
+###
+DELETE http://localhost:8080/contacts/6642956d232a7ef8d167a633
