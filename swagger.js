@@ -5,7 +5,7 @@ const doc = {
     title: 'My Contacts API',
     description: 'Use this to access my list of contacts'
   },
-  host: 'https://cse-341-personal-assignment-gnjj.onrender.com'
+  host: 'cse-341-personal-assignment-gnjj.onrender.com'
 };
 
 const outputFile = './swagger-output.json';
