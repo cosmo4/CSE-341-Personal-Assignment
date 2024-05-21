@@ -1,5 +1,6 @@
 const express = require('express');
 const professionalRoute = require("./routes")
+const cors = require('cors');
 const contactsRoute = require('./routes/contacts')
 const baseController = require("./controllers/baseController")
 const bodyParser = require('body-parser');

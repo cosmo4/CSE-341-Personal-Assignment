@@ -7,15 +7,15 @@ const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerDocument = require('../swagger.json');
 
 
-routes.use('/api-docs', swaggerUi.serve);
-routes.get('/api-docs', swaggerUi.setup(swaggerDocument));
+router.use('/api-docs', swaggerUi.serve);
+router.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
 // GET /feed/posts
 router.get('/contacts', contactsRoute);
 
 router.post('/contacts', baseController.createContact)
 
-routes.use(
+router.use(
     '/',
     (docData = (req, res) => {
       let docData = {
