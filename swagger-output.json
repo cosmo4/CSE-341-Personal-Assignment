@@ -25,6 +25,32 @@
       },
       "post": {
         "description": "create a new contact",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "First Name"
+                },
+                "lastName": {
+                  "example": "Last Name"
+                },
+                "email": {
+                  "example": "example@gmail.com"
+                },
+                "favoriteColor": {
+                  "example": "color"
+                },
+                "birthday": {
+                  "example": "01-01-2000"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "201": {
             "description": "Created"
