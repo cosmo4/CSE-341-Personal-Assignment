@@ -6,6 +6,9 @@ const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const mongodb = require('./db/connect');
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+
 const app = express();
 
 app.use(bodyParser.json()).use((req, res, next) => {
@@ -13,6 +16,14 @@ app.use(bodyParser.json()).use((req, res, next) => {
   next();
 })
 .use('/contacts', contactsRoute);
+
+
+app
+  .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+  .use(cors())
+  .use(express.json())
+  .use(express.urlencoded({ extended: true }))
+  .use('/', require('./routes'));
 
 const port = 8080;
 
